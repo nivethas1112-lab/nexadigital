@@ -561,24 +561,17 @@ ul {
   grid-auto-columns: minmax(320px, calc((100% - 36px) / 3));
   gap: 18px;
   overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-y: none;
+  touch-action: pan-x;
   scroll-snap-type: x mandatory;
   padding: 4px 2px 14px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(47, 126, 214, 0.7) #d6e8fb;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .testimonials-grid::-webkit-scrollbar {
-  height: 8px;
-}
-
-.testimonials-grid::-webkit-scrollbar-track {
-  background: #d6e8fb;
-  border-radius: 99px;
-}
-
-.testimonials-grid::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
-  border-radius: 99px;
+  display: none;
 }
 
 .testimonial-card {
